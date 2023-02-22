@@ -25,7 +25,7 @@ def algorhythm():
         step_number = step_number + 1
 
         print(f'Number of steps: {step_number}')
-    
+        print('This project makes use of CI techniques')
 
 
 if __name__ == '__main__':
