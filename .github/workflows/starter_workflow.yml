@@ -1,10 +1,4 @@
-<<<<<<< HEAD
 name: Pylint
-=======
----
-
-name: Super-Linter
->>>>>>> 6290b8355d17316381ff2739d429df844113c578
 
 on: [push]
 
@@ -15,7 +9,6 @@ jobs:
       matrix:
         python-version: ["3.8", "3.9", "3.10"]
     steps:
-<<<<<<< HEAD
     - uses: actions/checkout@v3
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v3
@@ -28,13 +21,3 @@ jobs:
     - name: Analysing the code with pylint
       run: |
         pylint $(git ls-files '*.py')
-=======
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Run Super-Linter
-        uses: github/super-linter@v4
-        env:
-          DEFAULT_BRANCH: main
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
->>>>>>> 6290b8355d17316381ff2739d429df844113c578
